@@ -1,0 +1,7 @@
+Build disassembler
+Build assembler
+Build vm
+Unit test
+Mock up some code
+Mock up some assembled files
+Simulate cycle counts

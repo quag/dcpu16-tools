@@ -13,7 +13,10 @@ func DisasmInstruction(words []uint16) (width int, disasm string) {
 	case opcode == 0:
 		switch a {
 		case 0x01:
-			return 1, fmt.Sprintf("JSR 0x%02x", b)
+			count := 1
+			ad, aw := DisasmValue(b, words[count])
+			count += aw
+			return count, "JSR " + ad
 		}
 	case opcode != 0:
 		count := 1
